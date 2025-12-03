@@ -8,7 +8,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@nimpl/context": "link:../../package",
+    "@nimpl/context": "workspace:*",
     "next": "canary",
     "react": "canary",
     "react-dom": "canary"
