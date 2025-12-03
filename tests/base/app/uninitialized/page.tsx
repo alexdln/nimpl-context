@@ -1,6 +1,6 @@
-import Nav from "../../components/Nav";
-import { UninitializedContext } from "../../components/UninitializedContext";
-import SecondComponent from "./SecondComponent";
+import { Nav } from "../../components/nav";
+import { UninitializedContext } from "../../components/uninitialized-context";
+import { TextUninitializedContext } from "../../components/text-initialized-context";
 
 export default function Page() {
     return (
@@ -8,10 +8,10 @@ export default function Page() {
             <Nav />
             <UninitializedContext.Provider value={{ uninitialized: "first value" }}>
                 <UninitializedContext.Consumer>
-                    {(serverContext) => <p id="context-first-value">{serverContext?.uninitialized}</p>}
+                    {(serverContext) => <p id="uninitialized-context-first-value">{serverContext?.uninitialized}</p>}
                 </UninitializedContext.Consumer>
             </UninitializedContext.Provider>
-            <SecondComponent />
+            <TextUninitializedContext id="uninitialized-context-second-value" />
         </div>
     );
 }

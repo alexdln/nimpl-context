@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Nav() {
+export const Nav = () => {
     return (
         <nav>
             <Link href="/after" id="to-after">
@@ -14,4 +14,4 @@ export default function Nav() {
             </Link>
         </nav>
     );
-}
+};
