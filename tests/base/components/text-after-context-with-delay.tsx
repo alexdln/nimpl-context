@@ -10,7 +10,6 @@ interface TextAfterContextWithDelayProps {
 export const TextAfterContextWithDelay: React.FC<TextAfterContextWithDelayProps> = async ({ id }) => {
     await sleep(1000);
     const context = getServerContext(AfterContext);
-    console.log("TextAfterContextWithDelay", context);
 
     return <p id={id}>{context?.after}</p>;
 };
