@@ -8,7 +8,6 @@ interface TextUninitializedContextProps {
 
 export const TextUninitializedContext: React.FC<TextUninitializedContextProps> = async ({ id }) => {
     const context = getServerContext(UninitializedContext);
-    console.log("TextUninitializedContext", context);
 
     return <p id={id}>{context?.uninitialized}</p>;
 };
