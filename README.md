@@ -20,6 +20,37 @@ npm i @nimpl/context
 yarn add @nimpl/context
 ```
 
+## Usage
+
+```tsx
+// stores/app-store/contexts.server.tsx
+import createServerContext from "@nimpl/context/create-server-context";
+export const AppServerContext = createServerContext<{ data: string | null }>({
+  data: null,
+});
+
+// components/parent-component
+import { AppServerContext } from "@/stores/app-store/contexts.server";
+import { ChildComponent } from "./child-component";
+
+export const ParentComponent = () => (
+  {/* Same as <AppServerContext.Provider /> */}
+  <AppServerContext value={{ data: "test" }}>
+    <ChildComponent />
+  </AppServerContext>
+);
+
+// components/child-component
+import getServerContext from "@nimpl/context/get-server-context";
+import { AppServerContext } from "@/stores/app-store/contexts.server";
+
+export const ChildComponent = () => {
+  const context = getServerContext(AppServerContext);
+
+  return <div>{context.data}</div>;
+};
+```
+
 ## Stability
 
 All context are covered with tests. Tests are run on every release and every 6 hours on the latest **Canary** version of `Next.js`.
@@ -28,7 +59,7 @@ In this way, you can be sure not only of the stability of the code, but also tha
 
 ## Examples
 
-You can see examples in the [directory](https://github.com/vordgi/nimpl-context/tree/main/examples) of the repository.
+You can see examples in the [directory](https://github.com/alexdln/nimpl-context/tree/main/examples) of the repository.
 
 ## Additional
 
@@ -38,4 +69,4 @@ Create issues for identified issues, desired getters, or various improvements.
 
 ## License
 
-[MIT](https://github.com/vordgi/nimpl-context/blob/main/LICENSE)
+[MIT](https://github.com/alexdln/nimpl-context/blob/main/LICENSE)
