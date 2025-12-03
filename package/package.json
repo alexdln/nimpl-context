@@ -6,8 +6,31 @@
     "**/*.js",
     "**/*.d.ts"
   ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/cjs/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/cjs/index.js"
+    },
+    "./create-server-context": {
+      "types": "./dist/cjs/create-server-context.d.ts",
+      "import": "./dist/esm/create-server-context.js",
+      "require": "./dist/cjs/create-server-context.js",
+      "default": "./dist/cjs/create-server-context.js"
+    },
+    "./get-server-context": {
+      "types": "./dist/cjs/get-server-context.d.ts",
+      "import": "./dist/esm/get-server-context.js",
+      "require": "./dist/cjs/get-server-context.js",
+      "default": "./dist/cjs/get-server-context.js"
+    }
+  },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && tsc --project tsconfig.esm.json"
   },
   "keywords": [
     "next",
