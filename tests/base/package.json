@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@nimpl/context": "workspace:*",
-    "next": "canary",
-    "react": "canary",
-    "react-dom": "canary"
+    "next": "^16.1.1",
+    "react": "19.3.0-canary-65eec428-20251218",
+    "react-dom": "19.3.0-canary-65eec428-20251218"
   },
   "devDependencies": {
     "@playwright/test": "1.57.0",
-    "@types/node": "24.10.1",
+    "@types/node": "25.0.3",
     "@types/react": "19.2.7",
     "typescript": "5.9.3"
   }

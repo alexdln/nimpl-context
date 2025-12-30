@@ -1,4 +1,5 @@
 {
+  "name": "isomorphic-context",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -6,13 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "@nimpl/context": "latest",
-    "next": "latest",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "@nimpl/context": "workspace:*",
+    "next": "^16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@types/node": "24.10.1",
+    "@types/node": "25.0.3",
     "@types/react": "19.2.7",
     "typescript": "5.9.3"
   }
