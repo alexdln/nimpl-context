@@ -54,16 +54,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "24.10.1",
+    "@types/node": "25.0.3",
     "@types/react": "19.2.7",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
-    "next": "16.0.7",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "typescript": "5.9.3"
   },
   "peerDependencies": {
+    "next": ">= 14.0.0",
     "react": ">= 18.2.0",
-    "react-dom": ">= 18.2.0",
-    "next": ">= 14.0.0"
+    "react-dom": ">= 18.2.0"
   }
 }
