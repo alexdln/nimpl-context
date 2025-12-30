@@ -9,6 +9,9 @@
     "eslint": "eslint",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": ["eslint"]
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/alexdln/nimpl-context.git"
